@@ -18,7 +18,7 @@ LTOPatch() {
 	[[ -f ${tagfile} ]] && return
 	>> "${tagfile}"
 
-	local lto_overlay_dir="$(portageq get_repo_path ${PORTAGE_CONFIGROOT} lto-overlay)"		
+	local lto_overlay_dir="/var/db/repos/lto-overlay"		
 	local basedir="${lto_overlay_dir%/}/sys-config/ltoize/files/patches"
 
 	local applied d f
