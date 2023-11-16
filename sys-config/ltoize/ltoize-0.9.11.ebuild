@@ -50,7 +50,7 @@ pkg_setup() {
 
 pkg_preinst() {
 	ACTIVE_GCC=$(gcc-fullversion)
-	GENTOOLTO_PORTDIR=$(portageq get_repo_path ${PORTAGE_CONFIGROOT} lto-overlay)
+	GENTOOLTO_PORTDIR="/var/db/repos/lto-overlay"		
 	LTO_PORTAGE_DIR="${GENTOOLTO_PORTDIR}/${CATEGORY}/${PN}/files"
 
 	COMMON_WORKAROUNDS=(
